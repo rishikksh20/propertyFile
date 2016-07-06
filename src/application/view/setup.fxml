@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="primaryVbox" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.SetUpController">
+  <fx:define>
+        <ToggleGroup fx:id="toggleBtn" />
+   </fx:define>
+  
+  <children>
+    <AnchorPane fx:id="primaryAnchor" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fx:id="logo" fitHeight="89.0" fitWidth="258.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../axia.jpg" />
+            </image>
+        </ImageView>
+            
+            <RadioButton fx:id="createWorkspace" layoutX="149.0" layoutY="164.0" mnemonicParsing="false" selected="true" text="Create Workspace">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleBtn" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="workspace" layoutX="149.0" layoutY="200.0" mnemonicParsing="false" text="Import Projects" toggleGroup="$toggleBtn" />
+            <Button fx:id="previous" layoutX="406.0" layoutY="361.0" mnemonicParsing="false" text="Previous" />
+            <Button fx:id="cancel" layoutX="494.0" layoutY="361.0" mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="next" layoutX="574.0" layoutY="361.0" mnemonicParsing="false" text="Next" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
