@@ -21,15 +21,11 @@
                 <Image url="@../../axia.jpg" />
             </image>
         </ImageView>
-            
-            <RadioButton fx:id="createWorkspace" layoutX="149.0" layoutY="164.0" mnemonicParsing="false" selected="true" text="Create Workspace">
-               <toggleGroup>
-                  <ToggleGroup fx:id="toggleBtn" />
-               </toggleGroup></RadioButton>
-            <RadioButton fx:id="workspace" layoutX="149.0" layoutY="200.0" mnemonicParsing="false" text="Import Projects" toggleGroup="$toggleBtn" />
             <Button fx:id="previous" layoutX="406.0" layoutY="361.0" mnemonicParsing="false" text="Previous" />
             <Button fx:id="cancel" layoutX="494.0" layoutY="361.0" mnemonicParsing="false" text="Cancel" />
             <Button fx:id="next" layoutX="574.0" layoutY="361.0" mnemonicParsing="false" text="Next" />
+            <CheckBox layoutX="149.0" layoutY="164.0" mnemonicParsing="false" text="Recievables" />
+            <CheckBox layoutX="149.0" layoutY="200.0" mnemonicParsing="false" text="Payments" />
       </children>
     </AnchorPane>
   </children>
