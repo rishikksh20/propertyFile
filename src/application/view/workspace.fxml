@@ -8,24 +8,24 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox fx:id="primaryVbox" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.SetUpController">
+<VBox fx:id="primaryVbox" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.WorkspaceController">
   <fx:define>
         <ToggleGroup fx:id="toggleBtn" />
    </fx:define>
   
   <children>
-    <AnchorPane fx:id="primaryAnchor" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane fx:id="secondaryAnchor" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
             <ImageView fx:id="logo" fitHeight="89.0" fitWidth="258.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../axia.jpg" />
             </image>
         </ImageView>
-            <Button fx:id="previous" layoutX="406.0" layoutY="361.0" mnemonicParsing="false" text="Previous" />
-            <Button fx:id="cancel" layoutX="494.0" layoutY="361.0" mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="previous" layoutX="406.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#previousButtonAction" text="Previous" />
+            <Button fx:id="cancel" layoutX="494.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#closeButtonAction" text="Cancel" />
             <Button fx:id="next" layoutX="574.0" layoutY="361.0" mnemonicParsing="false" text="Next" />
-            <CheckBox layoutX="149.0" layoutY="164.0" mnemonicParsing="false" text="Recievables" />
-            <CheckBox layoutX="149.0" layoutY="200.0" mnemonicParsing="false" text="Payments" />
+            <CheckBox fx:id="recievables" layoutX="149.0" layoutY="164.0" mnemonicParsing="false" text="Recievables" />
+            <CheckBox fx:id="payments" layoutX="149.0" layoutY="200.0" mnemonicParsing="false" text="Payments" />
       </children>
     </AnchorPane>
   </children>

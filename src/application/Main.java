@@ -14,13 +14,14 @@ import javafx.scene.layout.VBox;
 
 public class Main extends Application {
 	 private Stage primaryStage;
+	 private BorderPane root ;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			this.primaryStage=primaryStage;
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,640,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			//this.root = new BorderPane();
+			//Scene scene = new Scene(root,640,400);
+			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("FinnAxia SetUp"); 
 			initRootLayout();
 		} catch(Exception e) {
@@ -36,7 +37,7 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/setup.fxml"));
             VBox rootLayout = (VBox) loader.load();
-
+            
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
@@ -44,7 +45,7 @@ public class Main extends Application {
             
          // Give the controller access to the main app.
             SetUpController controller = loader.getController();
-            
+            controller.setPrevStage(primaryStage);
             
             primaryStage.show();
         } catch (IOException e) {

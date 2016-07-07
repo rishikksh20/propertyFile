@@ -28,8 +28,8 @@
                </toggleGroup></RadioButton>
             <RadioButton fx:id="workspace" layoutX="149.0" layoutY="200.0" mnemonicParsing="false" text="Import Projects" toggleGroup="$toggleBtn" />
             <Button fx:id="previous" layoutX="406.0" layoutY="361.0" mnemonicParsing="false" text="Previous" />
-            <Button fx:id="cancel" layoutX="494.0" layoutY="361.0" mnemonicParsing="false" text="Cancel" />
-            <Button fx:id="next" layoutX="574.0" layoutY="361.0" mnemonicParsing="false" text="Next" />
+            <Button fx:id="cancel" layoutX="494.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#closeButtonAction" text="Cancel" />
+            <Button fx:id="next" layoutX="574.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#gotoCreateCategory" text="Next" />
       </children>
     </AnchorPane>
   </children>
